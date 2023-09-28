@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 
-
-const Assign = ({pokemons, trainers, assignTrainer}) => {
+const Unassign = ({pokemons, trainers, assignTrainer}) => {
     const [selectedPoke, setSelectedPoke] = useState('')
     const [selectedTrainer, setSelectedTrainer] = useState('')
 
@@ -11,7 +10,7 @@ const Assign = ({pokemons, trainers, assignTrainer}) => {
 
     console.log(pokeNoTrain)
 
-    const assign = (ev) => {
+    const unassign = (ev) => {
         ev.preventDefault()
         assignTrainer(selectedTrainer, selectedPoke)
     }
@@ -19,7 +18,7 @@ const Assign = ({pokemons, trainers, assignTrainer}) => {
         <div>
             <h1>Assign</h1>
             <hr/>
-            <form onSubmit={assign}>
+            <form onSubmit={unassign}>
                 <select value={selectedPoke} onChange={ev => setSelectedPoke(ev.target.value)}>
                     <option value="">Choose Pokemon</option>
                     {
@@ -42,11 +41,10 @@ const Assign = ({pokemons, trainers, assignTrainer}) => {
                     }
                 </select>
                 <div>
-                    <button type="submit">Assign!</button>
+                    <button type="submit">Unassign!</button>
                 </div>
             </form>
         </div>
     )
 }
 
-export default Assign

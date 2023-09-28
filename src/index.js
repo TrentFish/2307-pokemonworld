@@ -8,6 +8,8 @@ import Pokemon from './Pokemon';
 import Trainer from './Trainer';
 import Assign from './Assign';
 
+
+
 const App = ()=> {
   const [pokemons, setPokemons] = useState([])
   const [trainers, setTrainers] = useState([])
@@ -40,7 +42,9 @@ const App = ()=> {
     setPokemons(pokemons.map(poke => poke.id === pokemon.id ? pokemon : poke))
   }
 
-
+  const addPokemon = async(pokemon) => {
+    const response = await axios.post(/api/)
+  }
 
   return (
     <div>

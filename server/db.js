@@ -50,7 +50,7 @@ const client = new pg.Client('postgres://localhost/pokemonworld');
 
       INSERT INTO pokemons(name, trainer_id)
       VALUES (
-        'Starmi',
+        'Starmie',
         (SELECT id FROM trainers WHERE name='Misty')
       );
 

@@ -10,7 +10,7 @@ const Pokemons = ({pokemons}) => {
           pokemons.map((pokemon) => {
             return(
                 <div key={pokemon.id}>
-                    <Link to={`/pokemon/${pokemon.id}`}><h3 >{pokemon.name}</h3></Link>
+                  <Link to={`/pokemon/${pokemon.id}`}><h3 >{pokemon.name}</h3></Link>
                 </div>
               
             )
