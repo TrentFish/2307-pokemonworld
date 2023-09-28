@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {  } from "index.js";
 
 
-const Pokemons = ({pokemons}) => {
+const Pokemons = ({pokemons, createPokemon}) => {
   const [pokeName, setPokeName] = useState('')
+  const save = async(ev) => {
+    ev.preventDefault();
+    const pokemon = { pokeName }
+    await createPokemon(pokemon);
+    setPokeName('');
+  }
+
+  const createPokemon = async(pokemon) => {
+    
+  }
+
     return (
       <div>
         <h1>All the Pokemon</h1>
