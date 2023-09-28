@@ -42,10 +42,6 @@ const App = ()=> {
     setPokemons(pokemons.map(poke => poke.id === pokemon.id ? pokemon : poke))
   }
 
-  const addPokemon = async(pokemon) => {
-    const response = await axios.post(/api/)
-  }
-
   return (
     <div>
       <h1>Pokemon World</h1>

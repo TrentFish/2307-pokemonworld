@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Trainers = ({trainers}) => {
+  const [trainerName, setTrainerName] = useState('')
     return (
       <div>
         <h1>All the Trainers</h1>
@@ -15,6 +16,10 @@ const Trainers = ({trainers}) => {
             )
           })
         }
+        <form>
+        <input placheholder='trainer' value={ trainerName } onChange={ ev => setTrainerName(ev.target.value)}/>
+          <button disabled={!trainerName}>Add Trainer</button>
+        </form>
       </div>
     )
   }
